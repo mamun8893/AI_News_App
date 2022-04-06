@@ -1,0 +1,50 @@
+.m-footer {
+  text-align: "center";
+  position: "fixed";
+  left: 0;
+  bottom: 0;
+  color: black;
+  width: 100%;
+  display: flex;
+  align-items: "center";
+  justify-content: "center";
+  height: "120px";
+}
+.m-link {
+  text-decoration: none;
+  color: rgba(21, 101, 192);
+}
+.m-image {
+  margin-left: 20;
+}
+.m-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 3%;
+  border-radius: 1;
+  color: white;
+  background-color: rgba(21, 101, 192);
+  margin: 0 12px;
+  text-align: center;
+  height: 25vmin;
+}
+.m-infoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.m-logoContainer {
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.m-alanLogo {
+  height: 20vmin;
+  border-radius: 15%;
+  padding: 0 5%;
+  margin: 3% 0;
+}
