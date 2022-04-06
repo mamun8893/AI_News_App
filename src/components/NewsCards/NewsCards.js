@@ -29,10 +29,18 @@ const NewsCards = ({ articles }) => {
   if (!articles.length) {
     return (
       <Grow in>
-        <Grid className="container" container alignItems="stretch" spacing={3}>
+        <Grid
+          className="news-container"
+          container
+          alignItems="stretch"
+          spacing={3}
+        >
           {infoCards.map((infoCard) => (
-            <Grid item xs={12} sm={6} md={4} lg={3} className="infoCard">
-              <div className="card" style={{ backgroundColor: infoCard.color }}>
+            <Grid item xs={12} sm={6} md={4} lg={3} className="news-infoCard">
+              <div
+                className="news-cards"
+                style={{ backgroundColor: infoCard.color }}
+              >
                 <Typography variant="h5" component="h5">
                   {infoCard.title}
                 </Typography>
@@ -55,7 +63,12 @@ const NewsCards = ({ articles }) => {
 
   return (
     <Grow in>
-      <Grid className="container" container alignItems="stretch" spacing={3}>
+      <Grid
+        className="news-container"
+        container
+        alignItems="stretch"
+        spacing={3}
+      >
         {articles.map((article, i) => (
           <Grid
             key={i}
