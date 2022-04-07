@@ -7,7 +7,7 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
-import React from "react";
+import React, { createRef, useEffect, useState } from "react";
 import "./style.css";
 import classNames from "classnames";
 
@@ -16,6 +16,25 @@ const NewsCard = ({
   activeArticle,
   i,
 }) => {
+  const [elRefs, setElRefs] = useState([]);
+
+  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 50);
+
+  useEffect(() => {
+    window.scroll(0, 0);
+
+    setElRefs((refs) =>
+      Array(20)
+        .fill()
+        .map((_, j) => refs[j] || createRef())
+    );
+  }, []);
+
+  useEffect(() => {
+    if (i === activeArticle && elRefs[activeArticle]) {
+      scrollToRef(elRefs[activeArticle]);
+    }
+  }, [i, activeArticle, elRefs]);
   return (
     <Card
       className={classNames("card", activeArticle === i ? "activeCard" : null)}
