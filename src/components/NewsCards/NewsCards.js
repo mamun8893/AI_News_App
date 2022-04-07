@@ -25,7 +25,7 @@ const infoCards = [
   },
 ];
 
-const NewsCards = ({ articles }) => {
+const NewsCards = ({ articles, activeArticle }) => {
   if (!articles.length) {
     return (
       <Grow in>
@@ -79,7 +79,7 @@ const NewsCards = ({ articles }) => {
             lg={4}
             style={{ display: "flex" }}
           >
-            <NewsCard article={article} i={i} />
+            <NewsCard activeArticle={activeArticle} i={i} article={article} />
           </Grid>
         ))}
       </Grid>

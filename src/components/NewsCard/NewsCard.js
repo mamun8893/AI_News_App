@@ -9,13 +9,17 @@ import {
 } from "@mui/material";
 import React from "react";
 import "./style.css";
+import classNames from "classnames";
 
 const NewsCard = ({
   article: { urlToImage, title, publishedAt, source, url, description },
+  activeArticle,
   i,
 }) => {
   return (
-    <Card className="card">
+    <Card
+      className={classNames("card", activeArticle === i ? "activeCard" : null)}
+    >
       <CardActionArea href={url} target="_blank">
         <CardMedia
           className="media"
