@@ -17,8 +17,7 @@ const NewsCard = ({
   i,
 }) => {
   const [elRefs, setElRefs] = useState([]);
-
-  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 50);
+  const scrollToRef = (ref) => window.scroll(0, ref.current.offsetTop - 50);
 
   useEffect(() => {
     window.scroll(0, 0);
@@ -37,6 +36,7 @@ const NewsCard = ({
   }, [i, activeArticle, elRefs]);
   return (
     <Card
+      ref={elRefs[i]}
       className={classNames("card", activeArticle === i ? "activeCard" : null)}
     >
       <CardActionArea href={url} target="_blank">
