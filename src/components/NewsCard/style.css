@@ -13,6 +13,7 @@
   flex-direction: column;
   justify-content: space-between;
   border-bottom: 10px solid white;
+  background-color: #1c1f26;
 }
 .activeCard {
   border-bottom: 10px solid #22289a;

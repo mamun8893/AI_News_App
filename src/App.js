@@ -41,7 +41,7 @@ function App() {
     <div className="App">
       <div className="m-logoContainer">
         <img
-          src="https://www.fintechfutures.com/files/2017/11/AI-FOT-A.jpg"
+          src="https://i.ibb.co/yBvvnKx/140713025-9810c80e-765a-42ed-826f-0dd347da3625.png"
           className="m-alanLogo"
           alt="logo"
         />

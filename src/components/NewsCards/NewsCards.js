@@ -35,8 +35,16 @@ const NewsCards = ({ articles, activeArticle }) => {
           alignItems="stretch"
           spacing={3}
         >
-          {infoCards.map((infoCard) => (
-            <Grid item xs={12} sm={6} md={4} lg={3} className="news-infoCard">
+          {infoCards.map((infoCard, i) => (
+            <Grid
+              key={i}
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              lg={3}
+              className="news-infoCard"
+            >
               <div
                 className="news-cards"
                 style={{ backgroundColor: infoCard.color }}
